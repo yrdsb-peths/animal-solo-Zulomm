@@ -23,7 +23,7 @@ public class Bee extends Actor
             move(5);
         }
         
-        eat();       
+        eat();
     }
     public void eat()
     {
@@ -33,6 +33,7 @@ public class Bee extends Actor
             removeTouching(Flower.class);
             MyWorld world = (MyWorld) getWorld();
             world.createFlower();
+            world.increaseScore();
         }
     }
 }
