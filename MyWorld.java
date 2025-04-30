@@ -9,7 +9,7 @@ public class MyWorld extends World {
     public MyWorld() {
         super(1200, 800, 1);
         Bee bee = new Bee();
-        addObject(bee, 200, 200);
+        addObject(bee, 100, 400);
         
         createFlower();
     }
@@ -18,7 +18,7 @@ public class MyWorld extends World {
     {
         Flower flower = new Flower();
         int x = Greenfoot.getRandomNumber(1200);
-        int y = 0;
+        int y = 50;
         addObject(flower, x, y);
     }
 }

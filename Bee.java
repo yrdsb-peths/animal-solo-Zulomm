@@ -16,12 +16,23 @@ public class Bee extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            move(-5);
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(5);
         }
-        removeTouching(Flower.class);
+        
+        eat();       
+    }
+    public void eat()
+    {
+        //Eat and spawn
+        if(isTouching(Flower.class))
+        {
+            removeTouching(Flower.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createFlower();
+        }
     }
 }
