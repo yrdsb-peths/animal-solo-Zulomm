@@ -10,7 +10,7 @@ public class MyWorld extends World {
     Label scoreLabel;
     public MyWorld() {  
         //Two object
-        super(1200, 800, 1);
+        super(1200, 800, 1, false);
         Bee bee = new Bee();
         addObject(bee, 100, 400);
         //score board
@@ -27,6 +27,11 @@ public class MyWorld extends World {
     }
     
     //end game(it's really doesn't work for my project be cause flower can move);
+    public void endGame()
+    {
+        Label gameOverLabel = new Label("GG" , 300);
+        addObject(gameOverLabel, 600, 400);
+    }
     public void createFlower()
     {
         Flower flower = new Flower();

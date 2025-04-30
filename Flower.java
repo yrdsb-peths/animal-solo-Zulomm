@@ -22,5 +22,11 @@ public class Flower extends Actor
         {
             setLocation(getX(), getY() + 2);
         }
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.endGame();
+            world.removeObject(this);
+        }
     }
 }
