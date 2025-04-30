@@ -7,11 +7,18 @@ import greenfoot.*;
  */
 public class MyWorld extends World {
     public MyWorld() {
-        super(600, 400, 1);
+        super(1200, 800, 1);
         Bee bee = new Bee();
-        addObject(bee, 100, 100);
+        addObject(bee, 200, 200);
         
+        createFlower();
+    }
+    
+    public void createFlower()
+    {
         Flower flower = new Flower();
-        addObject(flower, 500, 200);
+        int x = Greenfoot.getRandomNumber(1200);
+        int y = 0;
+        addObject(flower, x, y);
     }
 }
