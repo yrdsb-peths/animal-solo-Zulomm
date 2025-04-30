@@ -14,6 +14,13 @@ public class Flower extends Actor
      */
     public void act()
     {
-        setLocation(getX(), getY() -1);
+        if(Greenfoot.isKeyDown("up"))
+        {
+            setLocation(getX(), getY() - 2);
+        }
+        else if(Greenfoot.isKeyDown("down"))
+        {
+            setLocation(getX(), getY() + 2);
+        }
     }
 }
