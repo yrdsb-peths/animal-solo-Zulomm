@@ -9,24 +9,71 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bee extends Actor
 {
     GreenfootSound ding = new GreenfootSound("ding.mp3"); 
-    GreenfootImage fly = new GreenfootImage("images/beefly/fly1.png");
+    GreenfootImage[] flyRight = new GreenfootImage[5];
+    GreenfootImage[] flyLeft = new GreenfootImage[5];  
+    
+    String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
     
     public Bee()
     {
-        setImage(fly);
+        for(int i = 0; i< flyRight.length; i++)
+        {
+            flyRight[i] = new GreenfootImage("images/beefly/fly" + i + ".png");
+            flyRight[i].scale(100,75);
+        }
+        
+        for(int i = 0; i < flyLeft.length; i++)
+        {
+            flyLeft[i] = new GreenfootImage("images/beefly/fly" + i + ".png");
+            flyLeft[i].mirrorHorizontally();
+            flyLeft[i].scale(100,75);
+        }
+        
+        animationTimer.mark();
+        
+        setImage(flyRight[0]);
+    }
+    
+    //animate
+    int imageIndex = 0;
+    public void animateBee()
+    {
+        if(animationTimer.millisElapsed() < 100)
+        {
+            return;
+        }
+        animationTimer.mark();
+        
+        if(facing.equals("right"))
+        {
+            setImage(flyRight[imageIndex]);
+            imageIndex = (imageIndex + 1) % flyRight.length;
+        }
+        else
+        {
+            setImage(flyLeft[imageIndex]);
+            imageIndex = (imageIndex + 1) % flyLeft.length;
+        }
+
     }
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
         {
             move(-5);
+            facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
             move(5);
+            facing = "right";
         }
         
         eat();
+        // animate
+        
+        animateBee();
     }
     public void eat()
     {
