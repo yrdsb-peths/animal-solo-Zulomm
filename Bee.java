@@ -9,10 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bee extends Actor
 {
     GreenfootSound ding = new GreenfootSound("ding.mp3"); 
-    /**
-     * Act - do whatever the TEST wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    GreenfootImage fly = new GreenfootImage("images/beefly/fly1.png");
+    
+    public Bee()
+    {
+        setImage(fly);
+    }
     public void act()
     {
         if(Greenfoot.isKeyDown("left"))
