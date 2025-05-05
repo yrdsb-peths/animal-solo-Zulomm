@@ -10,9 +10,9 @@ public class MyWorld extends World {
     Label scoreLabel;
     public MyWorld() {  
         //Two object
-        super(1200, 800, 1, false);
+        super(1000, 600, 1, false);
         Bee bee = new Bee();
-        addObject(bee, 100, 400);
+        addObject(bee, 100, 500);
         //score board
         scoreLabel = new Label(0,50);
         addObject(scoreLabel, 20, 20);
@@ -30,12 +30,12 @@ public class MyWorld extends World {
     public void endGame()
     {
         Label gameOverLabel = new Label("GG" , 300);
-        addObject(gameOverLabel, 600, 400);
+        addObject(gameOverLabel, 500, 300);
     }
     public void createFlower()
     {
         Flower flower = new Flower();
-        int x = Greenfoot.getRandomNumber(1200);
+        int x = Greenfoot.getRandomNumber(1000);
         int y = 50;
         addObject(flower, x, y);
     }

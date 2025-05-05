@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Bee extends Actor
 {
+    GreenfootSound ding = new GreenfootSound("ding.mp3"); 
     /**
      * Act - do whatever the TEST wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,6 +35,7 @@ public class Bee extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.createFlower();
             world.increaseScore();
+            ding.play();
         }
     }
 }
