@@ -80,6 +80,7 @@ public class Bee extends Actor
         //Eat and spawn
         if(isTouching(Flower.class))
         {
+            removeTouching(Flower.class);
             MyWorld world = (MyWorld) getWorld();
             world.createFlower();
             world.increaseScore();
