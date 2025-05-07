@@ -53,5 +53,8 @@ public class TitleScreen extends World
         bee.setLocation(935,208);
         label.setLocation(581,383);
         label.setLocation(519,407);
+        Label label2 = new Label("Use \u2190 and \u2192 to move!", 50);
+        addObject(label2,487,335);
+        label2.setLocation(520,356);
     }
 }
