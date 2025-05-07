@@ -14,6 +14,7 @@ public class Flower extends Actor
      */
     public void act()
     {
+        setImage("images/tulip.png");
         setLocation(getX(), getY() + 2);
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
