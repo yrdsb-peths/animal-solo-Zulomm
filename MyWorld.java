@@ -12,6 +12,7 @@ public class MyWorld extends World {
     public MyWorld() {  
         //Two object
         super(1000, 600, 1, false);
+
         Bee bee = new Bee();
         addObject(bee, 100, 500);
         //score board
@@ -20,7 +21,6 @@ public class MyWorld extends World {
         
         createFlower();
     }
-    
     public void increaseScore()
     {
         score++;
