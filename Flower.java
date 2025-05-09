@@ -13,9 +13,12 @@ public class Flower extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int speed = 1;
-    public void act()
+    public Flower()
     {
         setImage("images/tulip.png");
+    }
+    public void act()
+    {
         setLocation(getX(), getY() + speed);
         MyWorld world = (MyWorld) getWorld();
         if(getY() >= world.getHeight())
