@@ -12,6 +12,7 @@ public class MyWorld extends World {
     public MyWorld() {  
         //Two object
         super(1000, 600, 1, false);
+        setBackground("images/background.png");
         Bee bee = new Bee();
         addObject(bee, 100, 500);
         //score board
