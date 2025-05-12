@@ -2,8 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Work Bee
- * 
- *Lionson
+ * *Lionson
  * 4/29/2025    
  */
 public class Bee extends Actor
@@ -61,12 +60,12 @@ public class Bee extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-8);
+            move(-10);
             facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(8);
+            move(10);
             facing = "right";
         }
         
