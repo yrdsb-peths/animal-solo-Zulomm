@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Bee extends Actor
 {
     GreenfootSound ding = new GreenfootSound("ding.mp3"); 
-    GreenfootImage[] flyRight = new GreenfootImage[5];
-    GreenfootImage[] flyLeft = new GreenfootImage[5];  
+    GreenfootImage[] flyRight = new GreenfootImage[17];
+    GreenfootImage[] flyLeft = new GreenfootImage[17];  
     
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
@@ -18,13 +18,13 @@ public class Bee extends Actor
     {
         for(int i = 0; i< flyRight.length; i++)
         {
-            flyRight[i] = new GreenfootImage("images/beefly/fly" + i + ".png");
+            flyRight[i] = new GreenfootImage("images/walk/tile00" + i + ".png");
             flyRight[i].scale(100,75);
         }
         
         for(int i = 0; i < flyLeft.length; i++)
         {
-            flyLeft[i] = new GreenfootImage("images/beefly/fly" + i + ".png");
+            flyLeft[i] = new GreenfootImage("images/walk/tile00" + i + ".png");
             flyLeft[i].mirrorHorizontally();
             flyLeft[i].scale(100,75);
         }

@@ -42,7 +42,7 @@ public class MyWorld extends World {
         Flower flower = new Flower();
         flower.setSpeed(level);
         int x = Greenfoot.getRandomNumber(1000);
-        int y = 50;
+        int y = -50;
         addObject(flower, x, y);
     }
 }
