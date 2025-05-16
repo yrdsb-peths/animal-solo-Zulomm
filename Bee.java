@@ -18,13 +18,13 @@ public class Bee extends Actor
     {
         for(int i = 0; i< flyRight.length; i++)
         {
-            flyRight[i] = new GreenfootImage("images/walk/tile00" + i + ".png");
+            flyRight[i] = new GreenfootImage("images/walk/tile" + i + ".png");
             flyRight[i].scale(100,75);
         }
         
         for(int i = 0; i < flyLeft.length; i++)
         {
-            flyLeft[i] = new GreenfootImage("images/walk/tile00" + i + ".png");
+            flyLeft[i] = new GreenfootImage("images/walk/tile" + i + ".png");
             flyLeft[i].mirrorHorizontally();
             flyLeft[i].scale(100,75);
         }
@@ -38,7 +38,7 @@ public class Bee extends Actor
     int imageIndex = 0;
     public void animateBee()
     {
-        if(animationTimer.millisElapsed() < 100)
+        if(animationTimer.millisElapsed() < 50)
         {
             return;
         }
